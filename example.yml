@@ -34,5 +34,7 @@ services:
     expose:
       - "8080"
     environment:
+      VIRUTAL_PATH: /
+      VIRUTAL_DEST: /
       VIRTUAL_HOST: polybond.dev
       LETSENCRYPT_HOST: polybond.dev
