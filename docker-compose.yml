@@ -12,6 +12,7 @@ services:
       - /var/docker/nginx/html:/usr/share/nginx/html
       - /var/docker/nginx/certs:/etc/nginx/certs
       - /var/docker/nginx/vhost:/etc/nginx/vhost.d
+      - /etc/nginx/conf.d
     logging:
       options:
         max-size: "10m"
