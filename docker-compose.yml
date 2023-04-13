@@ -39,7 +39,7 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl
 
-    front_end:
+  front_end:
     restart: always
     build: ./front_end
     container_name: front_end
