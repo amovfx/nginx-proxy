@@ -12,6 +12,8 @@ services:
       - LETSENCRYPT_EMAIL=amelnychukoseen@polybond.dev
     expose:
       - "8000"
+    ports:
+      - 80:80
 
 networks:
   default:
