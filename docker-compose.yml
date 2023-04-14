@@ -49,7 +49,7 @@ services:
       - "8080"
     environment:
       - VIRTUAL_HOST=polybond.dev
-      - VIRTUAL_PATH=/
+      - VIRTUAL_PATH=/helloworld
       - VIRTUAL_DEST=/
       - LETSENCRYPT_HOST=polybond.dev
       - LETSENCRYPT_EMAIL=amelnychukoseen@polybond.dev
