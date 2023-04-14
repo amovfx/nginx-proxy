@@ -42,6 +42,17 @@ services:
   #     - LETSENCRYPT_EMAIL=amelnychukoseen@polybond.dev
   #   expose:
   #     - "8000"
+  hello-world:
+    container_name: hello-world
+    image: kornkitti/express-hello-world
+    expose:
+      - "8080"
+    environment:
+      - VIRTUAL_HOST=polybond.dev
+      - VIRTUAL_PATH=/
+      - VIRTUAL_DEST=/
+      - LETSENCRYPT_HOST=polybond.dev
+      - LETSENCRYPT_EMAIL=amelnychukoseen@polybond.dev
 
 networks:
   default:
