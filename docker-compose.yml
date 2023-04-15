@@ -8,7 +8,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - docker_vol:ro
+      - /var/run/docker.sock:/var/run/docker.sock
       - /var/docker/nginx/html:/usr/share/nginx/html
       - /var/docker/nginx/certs:/etc/nginx/certs
       - /var/docker/nginx/vhost:/etc/nginx/vhost.d
@@ -25,7 +25,7 @@ services:
     volumes_from:
       - nginx
     volumes:
-      - docker_vol
+      - /var/run/docker.sock:/var/run/docker.sock
       - /var/docker/nginx/acme:/etc/acme.sh
     environment:
       DEFAULT_EMAIL: amelnychukoseen@polybond.dev
@@ -46,11 +46,6 @@ services:
 networks:
   default:
     name: hydra_frontend
-
-volumes:
-  docker_vol:
-    name: docker_vol
-      - /var/run/docker.sock:/var/run/docker.sock
 
   
 
