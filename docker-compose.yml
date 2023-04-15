@@ -42,6 +42,7 @@ services:
       - LETSENCRYPT_HOST=polybond.dev
       - LETSENCRYPT_EMAIL=amelnychukoseen@polybond.dev
 
+
 networks:
   default:
     name: hydra_frontend
